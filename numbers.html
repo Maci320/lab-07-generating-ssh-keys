@@ -2,12 +2,27 @@
 <html>
 <body>
 <script>
-var answer = prompt("Please enter a number.");
-console.log(answer); 
-console.log(/1000 + "thousands");
-console.log("answer/100 + "hundreds");
-console.log(answer/10 + "tens");
-console.log(answer/1 + "ones");
+var orig_num = prompt("Please enter a number.");  //9876
+
+var hundreds = orig_num % 1000;  //876
+var thousands = orig_num - hundreds;  //9000
+var thous_place = thousands/1000; //9
+console.log(thous_place +" "+ "thousands");
+
+var tens = hundreds % 100;  //76
+var tenten = hundreds - tens;  //800
+var hunds_place = tenten/100;  //8
+console.log(hunds_place + " " + "hundreds");
+
+var ones = tens % 10;  //6
+var onesones = tens - ones;  //70
+var tens_place = onesones/10;  //7
+console.log(tens_place + " tens");
+
+console.log(ones + " ones"); 
+
+
+
 </script>
 </body>
 </html>
